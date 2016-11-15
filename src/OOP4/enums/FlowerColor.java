@@ -5,8 +5,9 @@ package OOP4.enums;
  */
 public enum FlowerColor {
 
-    GREEN, RED, BLUE, BLACK;
+    GREEN, RED, BLUE, BLACK, WHITE;
 
+    @Override
     public String toString(){
         switch(this) {
             case GREEN:
@@ -17,6 +18,8 @@ public enum FlowerColor {
                 return "Blue";
             case BLACK:
                 return "Black";
+            case WHITE:
+                return "White";
             default:
                 return "No color";
         }

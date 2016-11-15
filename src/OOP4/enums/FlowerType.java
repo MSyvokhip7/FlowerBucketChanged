@@ -5,7 +5,7 @@ package OOP4.enums;
  */
 public enum FlowerType {
 
-    ROMASHKA, MAK, ROSE, TULPAN;
+    ROMASHKA, MAK, ROSE, TULIP, CACTUS;
 
     public String toString(){
         switch (this) {
@@ -15,8 +15,10 @@ public enum FlowerType {
                 return "Mak";
             case ROSE:
                 return "Rose";
-            case TULPAN:
-                return "Tulpan";
+            case TULIP:
+                return "Tulip";
+            case CACTUS:
+                return "Cactus";
             default:
                 return "No type";
         }

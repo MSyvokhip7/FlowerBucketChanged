@@ -2,43 +2,37 @@ package OOP4.parent;
 
 import OOP4.enums.FlowerColor;
 import OOP4.enums.FlowerType;
+import OOP4.spec.FlowerSpec;
 
 /**
  * Created by TheOriginMS7 on 24.10.2016.
  */
 public abstract class Flower {
-    protected Spec spec;
 
-    public void setType(FlowerType type) {
-        spec.setType(type);
+    protected FlowerSpec spec;
+    protected int height;
+    protected int freshness;
+
+    public Flower(FlowerSpec flowerSpec, int height, int freshness) {
+        this.spec = flowerSpec;
+        this.height = height;
+        this.freshness = freshness;
     }
-    public FlowerType getType() { return spec.getType();}
 
-    public void CalculatePrice(){}
-
-    public void setPrice(double price) {
-        spec.setPrice(price);
+    public FlowerSpec getSpec() {
+        return spec;
     }
-    public double getPrice() { return spec.getPrice();}
 
-    public void setLength(double length) {
-        spec.setLength(length);
+    public double getLength() { return height;}
+
+    public abstract double getPrice();
+
+    public int isFresh() {
+        return freshness;
     }
-    public double getLength() { return spec.getLength();}
 
-    public void setColor(FlowerColor color) {
-        spec.setColor(color);
-    }
-    public FlowerColor getColor() { return spec.getColor();}
-
-    public void setFresh(boolean freshness) {
-        spec.setFresh(freshness);
-    }
-    public boolean isFresh() {return spec.isFresh();}
-
-
+    @Override
     public String toString() {
-        return spec.toString();
+        return "Type: " + getSpec() + " price is " + String.valueOf(getPrice()) + " fresh level is " + String.valueOf(isFresh()) + " its height " + String.valueOf(getLength());
     }
-
 }
