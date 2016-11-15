@@ -56,6 +56,10 @@ public class Order {
             payment.pay(calculateTotalPrice());}
         delivery.deliver(items);
     }
+    
+    public void removeItem(FlowerBucket item){
+        items.remove(item);
+    }
 
     public static void main(String args[]){
         FlowerBucket bucket = new FlowerBucket();
